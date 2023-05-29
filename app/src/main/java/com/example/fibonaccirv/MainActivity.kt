@@ -22,20 +22,21 @@ class MainActivity : AppCompatActivity() {
     fun fibonacciNumbers(){
         var a = 0
         var b = 1
-        var c: Int
+        var d: Int
 
 //        println("Fibonacci numbers up to 200:")
 //        print("$a, $b")
         var numbers_list= mutableListOf<Int>(a,b)
         while (true) {
-            c = a + b
-            if (c > 100)
+
+            d = a + b
+            if (d > 100)
                 break
 
-            numbers_list.add(c)
+            numbers_list.add(d)
 
             a = b
-            b = c
+            b = d
         }
         binding.rvfibonacci.layoutManager=LinearLayoutManager(this)
         var numbersAdapter=RVfibonacci(numbers_list)
